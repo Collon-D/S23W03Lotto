@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="천기 누설"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/num1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="?"
+        android:background="#ffa"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/num2"
+        app:layout_constraintTop_toBottomOf="@id/txtMessage"
+        app:layout_constraintBottom_toTopOf="@id/num3"
+        />
+    <TextView
+        android:id="@+id/num2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="?"
+        android:background="#ffa"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toEndOf="@id/num1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtMessage"
+        app:layout_constraintBottom_toTopOf="@id/num4"
+        />
+    <TextView
+        android:id="@+id/num3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="?"
+        android:background="#ffa"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/num4"
+        app:layout_constraintTop_toBottomOf="@id/num1"
+        app:layout_constraintBottom_toTopOf="@id/num5"
+        />
+    <TextView
+        android:id="@+id/num4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="?"
+        android:background="#ffa"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toEndOf="@id/num3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num2"
+        app:layout_constraintBottom_toTopOf="@id/num6"
+        />
+    <TextView
+        android:id="@+id/num5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="?"
+        android:background="#ffa"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/num6"
+        app:layout_constraintTop_toBottomOf="@id/num3"
+        app:layout_constraintBottom_toTopOf="@id/btnGenerate"
+        />
+    <TextView
+        android:id="@+id/num6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="?"
+        android:background="#ffa"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toEndOf="@id/num5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num4"
+        app:layout_constraintBottom_toTopOf="@id/btnGenerate"
+        />
+    <Button
+        android:id="@+id/btnGenerate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="행운 번호 생성"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context=".MainActivity">-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textTitle"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="천기누설!"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/textNum1"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textNum1"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="num1"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toStartOf="@id/textNum2"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/textTitle"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textNum2"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="num2"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/textNum1"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/textTitle"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textNum3"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="num3"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toStartOf="@id/textNum4"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/textNum1"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textNum4"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="num4"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/textNum1"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/textTitle"-->
+    <!--        app:layout_constraintBottom_toBottomOf="id/btnGen" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btnGen"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Random Number Generation"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        />-->
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
