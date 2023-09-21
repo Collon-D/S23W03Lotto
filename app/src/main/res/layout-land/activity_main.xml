@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="천기 누설"
-        android:textSize="50sp"
         android:padding="16dp"
+        android:textSize="50sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,12 +25,11 @@
         android:text="?"
         android:textSize="70sp"
         android:background="#ffa"
-        android:padding="16dp"
         android:layout_margin="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/num2"
         app:layout_constraintTop_toBottomOf="@id/txtMessage"
-        app:layout_constraintBottom_toTopOf="@id/num3"
+        app:layout_constraintBottom_toTopOf="@id/btnGenerate"
         />
     <TextView
         android:id="@+id/num2"
@@ -40,12 +39,11 @@
         android:text="?"
         android:textSize="70sp"
         android:background="#ffa"
-        android:padding="16dp"
         android:layout_margin="16dp"
         app:layout_constraintStart_toEndOf="@id/num1"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/num3"
         app:layout_constraintTop_toBottomOf="@id/txtMessage"
-        app:layout_constraintBottom_toTopOf="@id/num4"
+        app:layout_constraintBottom_toTopOf="@id/btnGenerate"
         />
     <TextView
         android:id="@+id/num3"
@@ -55,12 +53,11 @@
         android:text="?"
         android:textSize="70sp"
         android:background="#ffa"
-        android:padding="16dp"
         android:layout_margin="16dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/num2"
         app:layout_constraintEnd_toStartOf="@id/num4"
-        app:layout_constraintTop_toBottomOf="@id/num1"
-        app:layout_constraintBottom_toTopOf="@id/num5"
+        app:layout_constraintTop_toBottomOf="@id/txtMessage"
+        app:layout_constraintBottom_toTopOf="@id/btnGenerate"
         />
     <TextView
         android:id="@+id/num4"
@@ -70,12 +67,11 @@
         android:text="?"
         android:textSize="70sp"
         android:background="#ffa"
-        android:padding="16dp"
         android:layout_margin="16dp"
         app:layout_constraintStart_toEndOf="@id/num3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/num2"
-        app:layout_constraintBottom_toTopOf="@id/num6"
+        app:layout_constraintEnd_toStartOf="@id/num5"
+        app:layout_constraintTop_toBottomOf="@id/txtMessage"
+        app:layout_constraintBottom_toTopOf="@id/btnGenerate"
         />
     <TextView
         android:id="@+id/num5"
@@ -85,11 +81,10 @@
         android:text="?"
         android:textSize="70sp"
         android:background="#ffa"
-        android:padding="16dp"
         android:layout_margin="16dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/num4"
         app:layout_constraintEnd_toStartOf="@id/num6"
-        app:layout_constraintTop_toBottomOf="@id/num3"
+        app:layout_constraintTop_toBottomOf="@id/txtMessage"
         app:layout_constraintBottom_toTopOf="@id/btnGenerate"
         />
     <TextView
@@ -100,11 +95,10 @@
         android:text="?"
         android:textSize="70sp"
         android:background="#ffa"
-        android:padding="16dp"
         android:layout_margin="16dp"
         app:layout_constraintStart_toEndOf="@id/num5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/num4"
+        app:layout_constraintTop_toBottomOf="@id/txtMessage"
         app:layout_constraintBottom_toTopOf="@id/btnGenerate"
         />
     <Button
