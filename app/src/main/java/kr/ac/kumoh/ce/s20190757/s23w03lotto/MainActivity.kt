@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import kr.ac.kumoh.ce.s20190757.s23w03lotto.databinding.ActivityMainBinding
 
@@ -23,22 +24,24 @@ class MainActivity : AppCompatActivity() {
         txtNum = arrayOf(main.num1, main.num2, main.num3, main.num4, main.num5, main.num6)
 
         model = ViewModelProvider(this)[LottoViewModel::class.java]
-        txtNum.forEachIndexed { index, textView ->
-            textView?.text = model.numbers[index].toString()
-        }
 
+        model.numbers.observe(this, Observer {
+            txtNum.forEachIndexed { index, textView ->
+                textView?.text = model.numbers.value!![index].toString()
+            }
+        })
         main.btnGenerate.setOnClickListener {
             model.generate()
-            txtNum.forEachIndexed { index, textView ->
-                textView?.text = model.numbers[index].toString()
-            }
-
-//            main.num1.text = Random.nextInt(1, 46).toString()
-//            main.num2.text = Random.nextInt(1, 46).toString()
-//            main.num3.text = Random.nextInt(1, 46).toString()
-//            main.num4.text = Random.nextInt(1, 46).toString()
-//            main.num5.text = Random.nextInt(1, 46).toString()
-//            main.num6.text = Random.nextInt(1, 46).toString()
+            // Observer가 받아와서 수정
+            // 비즈니스 로직과 눈에 보이는 것들은 분리시키기
+//            txtNum.forEachIndexed { index, textView ->
+//                textView?.text = model.numbers.value!![index].toString()
+//            }
+        }
+    }
+    private fun setNumbersTest() {
+        txtNum.forEachIndexed { index, textView ->
+            textView?.text = model.numbers.value!![index].toString()
         }
     }
 
@@ -72,3 +75,7 @@ class MainActivity : AppCompatActivity() {
         Log.i("LifeCycle!!!", "onRestart()")
     }
 }
+
+// Fuctional Interface (or Single Abstract Method)
+// Interface이지만 함수는 하나 밖에 없다.
+// ex) OnClickListener Interface에는 OnClick 함수 하나만 가지고 있다.
